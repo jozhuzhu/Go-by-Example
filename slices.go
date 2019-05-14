@@ -19,6 +19,7 @@ func main(){
     fmt.Println("apd:", s)
 
     c := make([]string, len(s))
+    // copy is the deep one
     copy(c, s)
     c[2] = "x"
     fmt.Println("cpy:", c)
