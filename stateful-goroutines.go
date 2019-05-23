@@ -43,6 +43,7 @@ func main(){
 				read := &readOp{
 					key: rand.Intn(5),
 					resp: make(chan int)}
+				fmt.Println("read:", read)
 				reads <-read
 				<-read.resp
 				atomic.AddUint64(&readOps, 1)
